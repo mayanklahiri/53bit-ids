@@ -7,15 +7,16 @@ Consider the task of generating random 53-bit integers (the maximum size safely 
   3. If `N` exists in the set, increment a counter for the number of collisions
   4. Add `N` to `generated`
   5. Go to step 2
-  
+
 This repository contains small programs in the following languages/runtimes that implement this algorithm:
 
   1. C++, compiled with `--std=c++11 -O3 -march=native`
   2. Python2, run with CPython and PyPy
-  3. Python3 
-  4. node.js LTS version (6.11.0), run with `--max-old-space-size=2048 --noturbo`
-  
-Memory was limited to 2 GB via bash `ulimit`. In all cases, the highest number of duplicates seen across multiple runs was **1**.
+  3. Python3, run with CPython
+  4. node.js, run with node-lts and node-latest and `--max-old-space-size=2048`
+
+Memory was limited to 2 GB via bash `ulimit`.
+
 Results as follows:
 
 ![Results](https://raw.githubusercontent.com/mayanklahiri/53bit-ids/master/53bit-ids.png)
